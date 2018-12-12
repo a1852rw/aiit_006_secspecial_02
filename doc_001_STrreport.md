@@ -40,3 +40,6 @@
     - 認証報告書：[c0532_rpt.pdf](https://github.com/a1852rw/aiit_006_secspecial_02/blob/master/doc_001_STrreport.md)
     - 認証書：[c0532_img.pdf](https://www.ipa.go.jp/security/jisec/certified_products/c0532/c0532_img.pdf)
     - ST：[c0532_st.pdf](https://www.ipa.go.jp/security/jisec/certified_products/c0532/c0532_st.pdf)
+
+### TOEの説明
+今回選択したTOEはホワイトリスト型マルウェア対策ソフトウェアである。
