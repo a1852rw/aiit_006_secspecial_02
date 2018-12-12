@@ -1,4 +1,4 @@
-# 課題1の報告書について
+# 課題1の報告書
 
 ## 報告する内容について
 ### ST選択と報告の形式
@@ -20,10 +20,13 @@
 
 ## 報告書本文
 ### STの選択について
-- 選択した製品
+- 選択したTOE
     - 認証番号：C0532
     - 製品名：Defense Platform Business Edition CC Ver.3.6.1.5
     - TOE名：Defense Platform Business Edition CC
+    - EAL：EAL3
+    - カテゴリ：ホワイトリスト型マルウェア対策ソフトウェア
+    - CCバージョン：3.1 リリース4
     - 認証年月日：2016年12月9日
     - 提供者：ハミングヘッズ株式会社
     - 掲載ページ：https://www.ipa.go.jp/security/jisec/certified_products/c0532/c0532_it5526.html
@@ -34,6 +37,9 @@
     - 形式：PDFファイル (掲載ページにて確認)
     - 掲載ページ：https://www.ipa.go.jp/security/jisec/certified_products/c0532/c0532_st.pdf
 - 参照した資料
-    - 認証報告書：c0532_rpt.pdf
-    - 認証書：c0532_img.pdf
-    - ST：c0532_st.pdf
+    - 認証報告書：[c0532_rpt.pdf](https://github.com/a1852rw/aiit_006_secspecial_02/blob/master/doc_001_STrreport.md)
+    - 認証書：[c0532_img.pdf](https://www.ipa.go.jp/security/jisec/certified_products/c0532/c0532_img.pdf)
+    - ST：[c0532_st.pdf](https://www.ipa.go.jp/security/jisec/certified_products/c0532/c0532_st.pdf)
+
+### TOEの説明
+今回選択したTOEはホワイトリスト型マルウェア対策ソフトウェアである。
