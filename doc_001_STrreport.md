@@ -3,7 +3,7 @@
 ## 報告する内容について
 ### ST選択と報告の形式
 - IPAのサイトより認証のされたSTを選択する
-    - https://www.ipa.go.jp/security/jisec/certified_products/cert_list.html
+    - JISEC認証製品リスト ( https://www.ipa.go.jp/security/jisec/certified_products/cert_list.html )
 - 選定は過去3年以内(2015年~)の製品が望ましい
 - CCのバージョンは3.1とする
 - EALのレベルは問わない
@@ -27,6 +27,7 @@
     - EAL：EAL3
     - カテゴリ：ホワイトリスト型マルウェア対策ソフトウェア
     - CCバージョン：3.1 リリース4
+    - CCRA相互承認の範囲：EAL2+ALC_FLR.2
     - 認証年月日：2016年12月9日
     - 提供者：ハミングヘッズ株式会社
     - 掲載ページ：https://www.ipa.go.jp/security/jisec/certified_products/c0532/c0532_it5526.html
