@@ -38,13 +38,13 @@
     - 形式：PDFファイル (掲載ページにて確認)
     - 掲載ページ：https://www.ipa.go.jp/security/jisec/certified_products/c0532/c0532_st.pdf
 - 参照した資料
-    - 認証報告書：[c0532_rpt.pdf](https://github.com/a1852rw/aiit_006_secspecial_02/blob/master/doc_001_STrreport.md)
+    - 認証報告書：[c0532_rpt.pdf](https://www.ipa.go.jp/security/jisec/certified_products/c0532/c0532_rpt.pdf)
     - 認証書：[c0532_img.pdf](https://www.ipa.go.jp/security/jisec/certified_products/c0532/c0532_img.pdf)
     - ST：[c0532_st.pdf](https://www.ipa.go.jp/security/jisec/certified_products/c0532/c0532_st.pdf)
 
 ### TOEの説明
 [ハミングヘッズ株式会社のホームページ](https://www.act2.com/dep/) およびセキュリティターゲット(以下「本ST」)内の記述をもとにTOEを説明する。
-今回選択したTOE(以下「本TOE」)はホワイトリスト型マルウェア対策ソフトウェアであり、本TOEでは「Defense Platform Business Edition」ビジネスエディションのサーバプログラムとクライアントプログラムが含まれる。インストール先端末のハードウェアとソフトウェアはTOEの範囲には含まれない。
+今回選択したTOE(以下「本TOE」)はハミングヘッズ株式会社(以下「ハミングヘッズ社」)の開発したホワイトリスト型マルウェア対策ソフトウェアであり、本TOEでは「Defense Platform Business Edition」ビジネスエディションのサーバプログラムとクライアントプログラムが含まれる。インストール先端末のハードウェアとソフトウェアはTOEの範囲には含まれない。
 また、TOEを構成する文書としてマニュアルやガイダンスあわせて8種類がある。
 TOEは管理者がサーバおよびユーザのPCにインストールをすると想定されている。その際にWindwosおよびUEFIの設定も管理者の責任において行う必要がある。
 
@@ -56,6 +56,11 @@ TOEは管理者がサーバおよびユーザのPCにインストールをする
 - ブラウザなどを利用してユーザーに自らセキュリティソフトを停止させる
 - 中間者攻撃によりアップデートを妨害する
 - セキュリティソフト自体の脆弱性を利用して予期せぬ動作を強制する
+
+### セキュリティ課題への対応方法について
+本TOEには「判定機能」「管理機能」「監査機能」でセキュリティ課題への対応を行う。
+「判定機能」は管理者の設定したホワイトリストにより保護対象への書き込みと管理者の許可しない通信の検出とブロックを行う。(ハミングヘッズ社ホームページによると本TOEには「検知モード」があり、インストール先PCの動作履歴を蓄積することができる。そこからホワイトリストを作成することで管理者の負担を減らすことができる)
+
 
 ### EALの説明
 本STの動作保証レベルはEAL3である。
