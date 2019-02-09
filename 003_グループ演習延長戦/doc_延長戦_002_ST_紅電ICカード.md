@@ -178,7 +178,7 @@ CCパート3 適合
 TOE利用の前提条件を以下に示す。
 
 - 共連れの防止(A.More_User)
-  - 利用者が他の人間と一緒に入室することはない。機密エリアの入り口にはマントラップが設置されており物理的に一人ずつしか入退室を行うことができない。
+  - 利用者が他の人間と一緒に入室することはできない。
 - 停電(A.Power_Cuts)
   - 紅電ICカード読取機および紅電カード発行機には常に十分な電力が供給される
 - 信頼できる管理者(A.Manage_Safe_Place)
@@ -200,7 +200,7 @@ TOEのセキュリティ対策方針を以下に示す。
   - TOEへのアクセス時にはアクセス元端末を識別し真正性を確認する。アクセス元端末が真正なものと確認できない場合はアクセスを拒否する。
 - パスワードによる認証(OT.Lost)
   - TOEの利用時にはパスワードによる認証を行い利用者を一意に識別し本人の確認を行う。
-  - 認証に失敗した場合は入室を拒否する。
+  - 認証に失敗した場合はデータの出力を拒否する。
 - ルート権限の禁止(OT.Access)
   - ルート権限によるTOEへのアクセスをシステム上で禁止し、利用者・管理者それぞれ専用の権限でのみアクセスを許可する。
 - データ保存への暗号標準の採用(OT.Encryption)
@@ -218,14 +218,14 @@ TOEのセキュリティ対策方針を以下に示す。
 - パスワードの管理(OE.Password)
   - 利用者がパスワードを秘密に保持できるようにその管理手続きを規定する。
 - 利用者の教育(OE.Educate1)
-  - 利用者が自己の認証情報の管理を徹底することするよう教育を行う。
+  - 利用者が自己の認証情報と支給されたTOEの管理を徹底することするよう教育を行う。
 - 管理者の教育(OE.Educate2)
   - 管理者が不適切なユーザ管理を行わないよう教育を行う。
-- 電力の供給(OE.Power_Stop)
+- 電力の供給(OE.Power_Cut)
   - TOE利用環境には主電源の他に副電源が設置されており、停電が発生した際には自動的に副電源に切り替わる。
   - そのため電力の供給が途絶えることはない。
 - マントラップの設置(OE.More_User)
-  - 機密エリアの入り口にはICカード読取装置とともにマントラップ(一人ずつしか入れない)
+  - 機密エリアの入り口にはICカード読取装置とともにマントラップ(一人ずつしか入れない)が設置されている。
 - カード発行専用端末の安全な場所への設置(OE.Manage_Safe_Place)
   - カード発行専用端末は管理者のみが入室することのできる部屋に設置する。
   - また、カード発行専用端末にはログイン権限を設定し管理者以外は操作することができないようにする。
@@ -237,19 +237,19 @@ TOEのセキュリティ対策方針を以下に示す。
 
 | |  T.Export  | T.Fake |  T.Use_Card  |  T.Password  |  T.Communication  |  T.Disassembly  |  T.Sidechanel  |  P.Crypte_Std  |  A.More_User  |  A.Power_Cuts  |  A.Manage_Safe_Place  |  A.Steal  |  A.Lost  |  A.Borrow  |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-|  OT.Authenticifation  |  OK  |  OK  |    |    |    |    |    |    |    |    |    |    |
-|  OT.Lost  |    |    |    |    |    |    |    |    |    |    |  OK  |  OK  |
-|  OT.Access  |    |    |    |    |    |    |    |    |  OK  |    |    |    |
-|  OT.Encryption  |    |    |    |    |    |  OK  |    |    |    |    |    |    |
-|  OT.Communication  |    |    |    |    |  OK  |  OK  |    |    |    |    |    |    |
-|  OT.Disassembly  |    |    |    |    |  OK  |  OK  |    |    |    |    |    |    |
-|  OT.Sidechanel  |    |    |    |    |  OK  |  OK  |    |    |    |    |    |    |
-|  OE.Password  |    |    |    |  OK  |    |    |    |    |    |  OK  |  OK  |  OK  |
-|  OE.Educate1  |    |    |  OK  |    |    |    |    |    |    |  OK  |  OK  |  OK  |
-|  OE.Educate2  |    |    |  OK  |    |    |    |    |    |    |    |    |    |
-|  OE.Power_Stop  |    |    |    |    |    |    |    |  OK  |    |    |    |    |
-|  OE.More_User  |    |    |    |    |    |    |  OK  |    |    |    |    |    |
-|  OE.Manage_Safe_Place  |    |    |    |    |    |    |    |    |  OK  |    |    |    |
+|  OT.Authenticifation  |  OK  |  OK  |    |    |    |    |    |    |    |    |    |    |    |    |
+|  OT.Lost  |    |    |  OK  |    |    |    |    |    |    |    |    |    |  |  |
+|  OT.Access  |  OK  |    |    |    |    |    |    |    |    |    |    |    |  |  |
+|  OT.Encryption  |  OK  |    |    |    |    |  OK  |    |  OK  |    |    |    |    |  |  |
+|  OT.Communication  |    |    |    |    |  OK  |    |    |  OK  |    |    |    |    |  |  |
+|  OT.Disassembly  |  OK  |    |    |    |    |  OK  |    |    |    |    |    |    |  |  |
+|  OT.Sidechanel  |    |    |    |    |    |    |  OK  |    |    |    |    |    |  |  |
+|  OE.Password  |  OK  |    |  OK  |  OK  |    |    |    |    |    |   |    |    |  |  |
+|  OE.Educate1  |    |    |  OK  |  OK  |    |    |    |    |    |    |    |  OK  |  OK  |  OK  |
+|  OE.Educate2  |    |    |  OK  |    |    |    |    |    |    |    |    |    |  |  |
+|  OE.Power_Cuts  |    |    |    |    |    |    |    |    |    |  OK  |    |    |  |  |
+|  OE.More_User  |    |    |    |    |    |    |    |    |  OK  |    |    |    |  |  |
+|  OE.Manage_Safe_Place  |    |    |    |    |    |    |    |    |    |    |  OK  |    |  |  |
 
 
 ## 第5章 拡張コンポーネント定義
