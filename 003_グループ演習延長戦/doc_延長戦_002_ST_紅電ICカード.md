@@ -210,9 +210,7 @@ TOEのセキュリティ対策方針を以下に示す。
 - 物理的耐タンパ機能の搭載(OT.Disassembly)
   - 紅電ICカードを分解しようとすると回路が物理的に破壊されデータおよび処理の内容を推定できる情報が消去されなければならない。
 - サイドチャネル攻撃に対する耐タンパ機能の搭載(OT.Sidechanel)
-  - 紅電ICカードで行われる認証は処理の時間が一定にならなければならない。
-  - 消費電力の変化を隠蔽するためノイズ源を搭載しなければならない。
-  - 
+  - 紅電ICカードで行われる処理の内容を外部に対して隠蔽しなければならない。
 
 ### 4.2 運用環境のセキュリティ対策方針
 運用環境のセキュリティ対策方針を以下に示す。  
@@ -237,19 +235,21 @@ TOEのセキュリティ対策方針を以下に示す。
 セキュリティ対策は、本章で規定した脅威に対抗するためのものである。あるいは、TOEの前提条件と組織のセキュリティ方針を実現するためのものである。  
 セキュリティ対策方針と対抗する脅威および対応する組織のセキュリティ方針および前提条件の対応関係を示す。
 
-| |  T.Export  | T.Fake |  T.Use_Card  |  T.Password  |  T.Communication  |  P.Crypte_Std  |  A.More_User  |  A.Power_Cuts  |  A.Manage_Safe_Place  |  A.Steal  |  A.Lost  |  A.Borrow  |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| |  T.Export  | T.Fake |  T.Use_Card  |  T.Password  |  T.Communication  |  T.Disassembly  |  T.Sidechanel  |  P.Crypte_Std  |  A.More_User  |  A.Power_Cuts  |  A.Manage_Safe_Place  |  A.Steal  |  A.Lost  |  A.Borrow  |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 |  OT.Authenticifation  |  OK  |  OK  |    |    |    |    |    |    |    |    |    |    |
 |  OT.Lost  |    |    |    |    |    |    |    |    |    |    |  OK  |  OK  |
 |  OT.Access  |    |    |    |    |    |    |    |    |  OK  |    |    |    |
 |  OT.Encryption  |    |    |    |    |    |  OK  |    |    |    |    |    |    |
 |  OT.Communication  |    |    |    |    |  OK  |  OK  |    |    |    |    |    |    |
+|  OT.Disassembly  |    |    |    |    |  OK  |  OK  |    |    |    |    |    |    |
+|  OT.Sidechanel  |    |    |    |    |  OK  |  OK  |    |    |    |    |    |    |
 |  OE.Password  |    |    |    |  OK  |    |    |    |    |    |  OK  |  OK  |  OK  |
 |  OE.Educate1  |    |    |  OK  |    |    |    |    |    |    |  OK  |  OK  |  OK  |
 |  OE.Educate2  |    |    |  OK  |    |    |    |    |    |    |    |    |    |
 |  OE.Power_Stop  |    |    |    |    |    |    |    |  OK  |    |    |    |    |
 |  OE.More_User  |    |    |    |    |    |    |  OK  |    |    |    |    |    |
-| OE.Manage_Safe_Place  |    |    |    |    |    |    |    |    |  OK  |    |    |    |
+|  OE.Manage_Safe_Place  |    |    |    |    |    |    |    |    |  OK  |    |    |    |
 
 
 ## 第5章 拡張コンポーネント定義
