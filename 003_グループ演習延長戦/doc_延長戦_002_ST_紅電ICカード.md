@@ -248,21 +248,7 @@ TOEのセキュリティ対策方針を以下に示す。
 セキュリティ対策は、本章で規定した脅威に対抗するためのものである。あるいは、TOEの前提条件と組織のセキュリティ方針を実現するためのものである。  
 セキュリティ対策方針と対抗する脅威および対応する組織のセキュリティ方針および前提条件の対応関係を示す。
 
-| |  T.Export  | T.Fake |  T.Use_Card  |  T.Password  |  T.Communication  |  T.Disassembly  |  T.Sidechanel  |  P.Crypte_Std  |  A.More_User  |  A.Power_Cuts  |  A.Manage_Safe_Place  |  A.Steal  |  A.Lost  |  A.Borrow  |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-|  OT.Authenticifation  |  OK  |  OK  |    |    |    |    |    |    |    |    |    |    |    |    |
-|  OT.Lost  |    |    |  OK  |    |    |    |    |    |    |    |    |    |  |  |
-|  OT.Access  |  OK  |    |    |    |    |    |    |    |    |    |    |    |  |  |
-|  OT.Encryption  |  OK  |    |    |    |    |  OK  |    |  OK  |    |    |    |    |  |  |
-|  OT.Communication  |    |    |    |    |  OK  |    |    |  OK  |    |    |    |    |  |  |
-|  OT.Disassembly  |  OK  |    |    |    |    |  OK  |    |    |    |    |    |    |  |  |
-|  OT.Sidechanel  |    |    |    |    |    |    |  OK  |    |    |    |    |    |  |  |
-|  OE.Password  |  OK  |    |  OK  |  OK  |    |    |    |    |    |   |    |    |  |  |
-|  OE.Educate1  |    |    |  OK  |  OK  |    |    |    |    |    |    |    |  OK  |  OK  |  OK  |
-|  OE.Educate2  |    |    |  OK  |    |    |    |    |    |    |    |    |    |  |  |
-|  OE.Power_Cuts  |    |    |    |    |    |    |    |    |    |  OK  |    |    |  |  |
-|  OE.More_User  |    |    |    |    |    |    |    |    |  OK  |    |    |    |  |  |
-|  OE.Manage_Safe_Place  |    |    |    |    |    |    |    |    |    |    |  OK  |    |  |  |
+[4.3セキュリティ対策方針実施根拠](https://github.com/a1852rw/aiit_006_secspecial_02/blob/master/003_%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%E6%BC%94%E7%BF%92%E5%BB%B6%E9%95%B7%E6%88%A6/001_%E7%94%BB%E5%83%8F%E7%BD%AE%E3%81%8D%E5%A0%B4/4.3%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3%E5%AF%BE%E7%AD%96%E6%96%B9%E9%87%9D%E5%AE%9F%E6%96%BD%E6%A0%B9%E6%8B%A0.png)
 
 
 ## 第5章 拡張コンポーネント定義
@@ -293,6 +279,8 @@ TOEのセキュリティ対策方針を以下に示す。
 #### 6.1.2. TOE セキュリティ保証要件
 セキュリティ保証要件を記述する。  
 本TOEの評価保障レベルはEAL4である。すべてのセキュリティ保証要件はCCパート3に規定されているセキュリティ保証コンポーネントを直接使用する。
+
+[6.1.2TOEセキュリティ保証要件]()
 
 |  保証クラス  |  保証コンポーネント  | 
 |---|---|
@@ -325,6 +313,8 @@ TOEのセキュリティ対策方針を以下に示す。
 #### 6.2.1 セキュリティ機能要件根拠
 各TOEセキュリティ対策方針は少なくとも1つのセキュリティ機能要件により実現される。  
 以下の表でセキュリティ機能要件は少なくとも一つのセキュリティ対策方針に対応していることを示す。  
+
+[6.2.1セキュリティ機能要件根拠]()
 
 ```txt
 ここにはセキュリティ機能要件根拠についての表を挿入する
